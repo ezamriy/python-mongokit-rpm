@@ -2,7 +2,7 @@
 
 Name:           python-mongokit
 Version:        0.8.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Structured schema and validation layer on top of PyMongo
 
 Packager:       Eugene Zamriy <eugene@zamriy.info>
@@ -16,7 +16,7 @@ BuildArch:      noarch
 
 Provides:       mongokit
 
-Requires:       python-pymongo >= 2.0.1
+Requires:       python-pymongo >= 2.0.1, python-pymongo-gridfs
 BuildRequires:  python-devel, python-setuptools
 
 
@@ -50,5 +50,8 @@ as possible with the KISS and DRY principles in mind.
 
 
 %changelog
+* Wed Jul 10 2013 Eugene G. Zamriy <eugene@zamriy.info> - 0.8.3-2
+- Added missing dependency python-pymongo-gridfs
+
 * Mon Jul  8 2013 Eugene G. Zamriy <eugene@zamriy.info> - 0.8.3-1
 - initial release. 0.8.3 version
