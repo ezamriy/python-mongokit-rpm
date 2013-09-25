@@ -1,8 +1,8 @@
 %global pkg     mongokit
 
 Name:           python-mongokit
-Version:        0.8.3
-Release:        2%{?dist}
+Version:        0.9.0
+Release:        1%{?dist}
 Summary:        Structured schema and validation layer on top of PyMongo
 
 Packager:       Eugene Zamriy <eugene@zamriy.info>
@@ -10,13 +10,13 @@ Packager:       Eugene Zamriy <eugene@zamriy.info>
 Group:          Development/Languages
 License:        New BSD License
 URL:            http://namlook.github.com/%{pkg}/
-Source0:        https://github.com/namlook/%{pkg}/archive/v%{version}.tar.gz
+Source0:        https://pypi.python.org/packages/source/m/%{pkg}/%{pkg}-%{version}.tar.gz
 
 BuildArch:      noarch
 
 Provides:       mongokit
 
-Requires:       python-pymongo >= 2.0.1, python-pymongo-gridfs
+Requires:       python-pymongo >= 2.5, python-pymongo-gridfs
 BuildRequires:  python-devel, python-setuptools
 
 
@@ -45,11 +45,14 @@ as possible with the KISS and DRY principles in mind.
 
 %files
 %defattr(-,root,root,-)
-%doc AUTHORS CHANGELOG LICENSE README
+%doc AUTHORS LICENSE README
 %{python_sitelib}/*
 
 
 %changelog
+* Wed Sep 25 2013 Eugene G. Zamriy <eugene@zamriy.info> - 0.9.0-1
+- update to 0.9.0 version. Now requires python-pymongo >= 2.5
+
 * Wed Jul 10 2013 Eugene G. Zamriy <eugene@zamriy.info> - 0.8.3-2
 - Added missing dependency python-pymongo-gridfs
 
