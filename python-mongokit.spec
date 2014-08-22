@@ -1,11 +1,9 @@
 %global pkg     mongokit
 
 Name:           python-mongokit
-Version:        0.9.0
+Version:        0.9.1.1
 Release:        1%{?dist}
 Summary:        Structured schema and validation layer on top of PyMongo
-
-Packager:       Eugene Zamriy <eugene@zamriy.info>
 
 Group:          Development/Languages
 License:        New BSD License
@@ -45,11 +43,14 @@ as possible with the KISS and DRY principles in mind.
 
 %files
 %defattr(-,root,root,-)
-%doc AUTHORS LICENSE README
+%doc AUTHORS LICENSE README.md
 %{python_sitelib}/*
 
 
 %changelog
+* Fri Aug 22 2014 Eugene G. Zamriy <eugene@zamriy.info> - 0.9.1.1-1
+- update to 0.9.1.1 version
+
 * Wed Sep 25 2013 Eugene G. Zamriy <eugene@zamriy.info> - 0.9.0-1
 - update to 0.9.0 version. Now requires python-pymongo >= 2.5
 
